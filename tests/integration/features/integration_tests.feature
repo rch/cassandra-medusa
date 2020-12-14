@@ -650,7 +650,7 @@ Feature: Integration tests
         | storage           | client encryption |
         | local      |  with_client_encryption |
 
-    @17
+    @17 @skip-cassandra-2
     Scenario Outline: Perform a differential backup over gRPC , verify its index, then delete it over gRPC with management API
         Given I have a fresh ccm cluster with mgmt api "<client encryption>" named "scenario17"
         Given I am using "<storage>" as storage provider in ccm cluster "<client encryption>" with mgmt api
